@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e4da36e-a0ee-4b87-9981-93faeb468bb7" name="Changes" comment="initial">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExampleGetWithAwaitility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/CurrentOrg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/ExtendedProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/GetUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/GetUserResponseItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/OrgPrivileges.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/OrgsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserGroupsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserInheritedGroupsItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/GetUsersResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExampleGETRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExampleGETRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExampleGetWithAwaitility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExampleGetWithAwaitility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExamplePOSTRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExamplePOSTRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +59,13 @@
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/Users/serkancura/Documents/sc-test-automation/RestAssured/src/test/java",
     "last_opened_file_path": "/Users/serkancura/Documents/sc-test-automation/rdRestAssuredProject",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -59,7 +76,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExampleGetWithAwaitility">
+  <component name="RunManager" selected="Application.ExampleGETRequest">
     <configuration name="ExampleGETRequest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ExampleGETRequest" />
       <module name="rdRestAssuredProject" />
@@ -90,12 +107,20 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExampleGETRequest" />
+        <item itemvalue="Application.ExamplePOSTRequest" />
         <item itemvalue="Application.ExampleGetWithAwaitility" />
         <item itemvalue="Application.ExampleGetWithAwatility" />
-        <item itemvalue="Application.ExamplePOSTRequest" />
-        <item itemvalue="Application.ExampleGETRequest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-92e50af3" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-9b16c6e2" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,6 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709826794542</updated>
+      <workItem from="1723132576292" duration="5013000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -124,6 +150,9 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

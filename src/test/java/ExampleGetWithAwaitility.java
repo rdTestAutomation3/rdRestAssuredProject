@@ -41,7 +41,7 @@ public class ExampleGetWithAwaitility {
 */
         System.out.println("-------------------------");
 
-        await().atMost(10, SECONDS).untilAsserted(() -> get(url).then().log().all().statusCode(201));
+        await().atMost(10, SECONDS).untilAsserted(() -> get(url).then().log().all().statusCode(200));
 
     }
 }
