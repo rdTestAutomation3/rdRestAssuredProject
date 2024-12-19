@@ -1,53 +1,77 @@
+import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import models.GetUserResponse;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.not;
 
 public class ExamplePOSTRequest {
 
     public static void main(String[] args) {
         // 1. İstek yapılacak URL'yi belirleyin
-        String url = "https://team1.thoughtspot.cloud/api/rest/2.0/users/search";
+        String url = "https://petstore.swagger.io/v2/user";
 
         // 2. İstek gövdesini ve başlığını oluşturun ve gerektiğinde parametreleri ekleyin
-
         Map<String, Object> header = new HashMap<>();
-        header.put("Authorization","Bearer c2Vya2FuY3VyYXJkQGdtYWlsLmNvbTpKSE5vYVhKdk1TUlRTRUV0TWpVMkpEVXdNREF3TUNRd1MyazFSbkFyYzNwSmNqWXlVbmR1U1Zob2NtaDNQVDBrY2t4bk9GVlNlRE5uTW1kcFNYUTJZMVV2VHk5VE9ITnRNa2d2UTFGYVlUaEdTV1V3UW5nM1RubEVUVDA=");
         header.put("Accept", "application/json");
         header.put("Content-Type", "application/json");
 
-        String requestBody = "{\n" +
-                "  \"record_offset\": 0,\n" +
-                "  \"record_size\": 10,\n" +
-                "  \"include_favorite_metadata\": false\n" +
-                "}";
+        Faker faker = new Faker();
+        String username = faker.name().username();
+        String firstname = faker.name().firstName();
+        String lastname = faker.name().lastName();
+        String email = faker.bothify("????##@gmail.com");
+        String password = faker.regexify("[a-z1-9]{6}");
+        String phone = faker.phoneNumber().cellPhone();
 
-        // 3. İstek başlıklarını belirleyin (opsiyonel)
-        String contentType = ContentType.JSON.toString();
+        // Post Test
+        String createUserRequest = "{\n  \"id\": 0," +
+                "\n  \"username\":\"" + username + "\",\n " +
+                "\"firstName\": \"" + firstname + "\",\n " +
+                "\"lastName\": \"" + lastname + "\",\n " +
+                "\"email\": \"" + email + "\",\n  " +
+                "\"password\": \"" + password + "\",\n  " +
+                "\"phone\": \"" + phone+"\",\n  " +
+                "\"userStatus\": 1 \n}";
 
-        // 4. POST isteğini gönderin
+        // 3. POST isteğini gönderin
         Response response = RestAssured.given()
-                .contentType(contentType)
                 .headers(header)
-                .body(requestBody)
+                .body(createUserRequest)
                 .when().log().all()
                 .post(url);
 
-        // 5. Yanıtı işleyin ve doğrulamalar yapın
-        response.then().log().all();
+        // 4. Yanıtı işleyin ve doğrulamalar yapın
+        response.then().log().all().statusCode(200)
+                .body("code", equalTo(200))
+                .body("message", not(equalTo("0")));
 
+        String message = response.jsonPath().getString("message");
 
-        assertThat(response.statusCode()).isEqualTo(200);
-        assertThat(response.body().jsonPath().getString("[0].id")).isEqualTo("2d0b8b66-a1ef-4c67-aff4-0f5812efa60b");
-        assertThat(response.body().jsonPath().getString("[0].name")).isEqualTo("serkancurard@gmail.com");
-        assertThat(response.jsonPath().getBoolean("[0].can_change_password")).isFalse();
+        assertThat(message).isNotEqualTo("0");
 
+        // Get Test
+        Response getResponse = RestAssured.given()
+                .headers(header)
+                .when().log().all()
+                .get(url+"/"+username);
 
+        getResponse.then().log().all()
+                .statusCode(200)
+                .body("id", equalTo(Long.valueOf(message)))
+                .body("userStatus",equalTo(1));
+
+        assertThat(getResponse.jsonPath().getLong("id")).isEqualTo(Long.valueOf(message));
+        assertThat(getResponse.jsonPath().getString("firstName").strip()).isEqualTo(firstname);
+        assertThat(getResponse.jsonPath().getString("username").strip()).isEqualTo(username);
+        assertThat(getResponse.jsonPath().getString("lastName")).isEqualTo(lastname);
+        assertThat(getResponse.jsonPath().getString("email")).isEqualTo(email);
+        assertThat(getResponse.jsonPath().getString("password")).isEqualTo(password);
+        assertThat(getResponse.jsonPath().getString("phone")).isEqualTo(phone);
     }
 }
 
