@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e4da36e-a0ee-4b87-9981-93faeb468bb7" name="Changes" comment="initial">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/CurrentOrg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/ExtendedProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/GetUserResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/GetUserResponseItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/OrgPrivileges.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/OrgsItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserGroupsItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserInheritedGroupsItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/GetUsersResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ExampleGETRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExampleGETRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ExampleGetWithAwaitility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExampleGetWithAwaitility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/CurrentOrg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/ExtendedProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/GetUserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/GetUserResponseItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrgPrivileges.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrgsItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/UserGroupsItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/UserInheritedGroupsItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExampleGETRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExampleGetWithAwaitility.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ExamplePOSTRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExamplePOSTRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +32,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -55,7 +59,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "rest-assured",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/Users/serkancura/Documents/sc-test-automation/RestAssured/src/test/java",
     "last_opened_file_path": "/Users/serkancura/Documents/sc-test-automation/rdRestAssuredProject",
@@ -76,7 +80,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExampleGETRequest">
+  <component name="RunManager" selected="Application.ExamplePOSTRequest">
     <configuration name="ExampleGETRequest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ExampleGETRequest" />
       <module name="rdRestAssuredProject" />
@@ -107,20 +111,12 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ExampleGETRequest" />
         <item itemvalue="Application.ExamplePOSTRequest" />
+        <item itemvalue="Application.ExampleGETRequest" />
         <item itemvalue="Application.ExampleGetWithAwaitility" />
         <item itemvalue="Application.ExampleGetWithAwatility" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-92e50af3" />
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-9b16c6e2" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -173,9 +169,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ExampleGetWithAwaitility.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/test/java/ExamplePOSTRequest.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ExamplePOSTRequest.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
